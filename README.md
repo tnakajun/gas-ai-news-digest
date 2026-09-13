@@ -7,7 +7,7 @@ Google Apps Script (GAS)、Google Sheets、および Gemini 3.6 Flash API を統
 ---
 
 ## 💡 特徴・アーキテクチャ
-
+```text
 - **完全サーバーレス & ローコスト:** Google Apps Script と Google AI Studio (Gemini 3.6 Flash) を採用し、インフラコスト・保守ゼロで運用。
 - **RSSニュース自動収集:** GoogleニュースRSSから最新のビジネス向けAI関連記事を毎朝クローリングし、スプレッドシートへ重複排除して蓄積。
 - **ロールプレイ・プロンプト設計:** 
