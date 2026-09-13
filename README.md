@@ -84,5 +84,8 @@ Google Apps Script (GAS)、Google Sheets、および Gemini 3.6 Flash API を統
 
     時刻: 午前 7時〜8時
 
+```
+---
+
 ## 📄 ライセンス
 MIT License
