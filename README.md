@@ -35,8 +35,7 @@ Google Apps Script (GAS)、Google Sheets、および Gemini 3.6 Flash API を統
 
 ---
 
-##🚀 セットアップ手順
-
+🚀 セットアップ手順
 1. スプレッドシートの準備
 Googleスプレッドシートを新規作成し、シート名を 配信履歴 に変更します。
 
