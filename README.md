@@ -1,2 +1,35 @@
-# gas-ai-news-digest
-utomated AI News Digest email system using Google Apps Script, Google Sheets, and Gemini 3.6 Flash API.
+# 📬 GAS AI News Digest & Dialogue Generator
+
+Google Apps Script (GAS)、Google Sheets、および Gemini 3.6 Flash API を統合した、完全自動化された社内向け「AIニュースダイジェスト」配信システムです。
+
+最新のAIニュースを自動収集・要約し、非エンジニア層でも親しみやすい「博士とビギ太の対話形式（掛け合い解説）」を取り入れたHTMLメールを毎朝定期配信します。
+
+---
+
+## 💡 特徴・アーキテクチャ
+
+- **完全サーバーレス & ローコスト:** Google Apps Script と Google AI Studio (Gemini 3.6 Flash) を採用し、インフラコスト・保守ゼロで運用。
+- **RSSニュース自動収集:** GoogleニュースRSSから最新のビジネス向けAI関連記事を毎朝クローリングし、スプレッドシートへ重複排除して蓄積。
+- **ロールプレイ・プロンプト設計:** 
+  - サクッと読める通常ニュース要約（2本）
+  - 身近なたとえ話（料理等）で解説する「博士」と、現場視点で素朴な疑問をぶつける「ビギ太」の掛け合い解説（1本）
+- **社内セキュリティ配慮:** 
+  - 外部リンクの直接クリックによるフィッシングリスクを低減するため、URLではなくメディア名のみを表記。
+  - APIキーなどの認証情報は `PropertiesService`（スクリプト プロパティ）でセキュアに管理。
+- **リッチなHTMLメール配信:** 視覚的に直感理解しやすいキャラクターアイコン付きレイアウト。
+
+---
+
+## 🛠 システム構成
+
+```text
+[Googleニュース RSS]
+        │
+        ▼ (自動収集 & 重複排除)
+[Googleスプレッドシート (配信履歴)]
+        │
+        ▼ (未処理記事抽出)
+[Gemini 3.6 Flash API] (要約 & 対話スクリプト生成)
+        │
+        ▼ (HTML装飾・アイコン埋め込み)
+[GmailApp / Outlook] ➔ 社内ステークホルダーへ自動配信
