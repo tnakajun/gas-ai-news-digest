@@ -20,6 +20,7 @@ Google Apps Script (GAS)、Google Sheets、および Gemini 3.6 Flash API を統
 
 ---
 
+
 ## 🛠 システム構成
 
 ```text
